@@ -4,6 +4,10 @@ A very, _very_ naive excel-_like_ formula engine that uses "clever" regex search
 
 ## Quick Start
 
+```bash
+npm install formulaic
+```
+
 ```js
 import * as F from 'formulaic'
 
