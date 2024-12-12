@@ -50,18 +50,7 @@ Deno.test('compile', () => {
     assertEquals(answer, 2) 
   }
 
-  // {
-  //   // sum(C:D)
-  //   // fn.sum(fn.range('C:D'))
-  //   const answer = compile('sum(C:D)').compiled({
-  //     range(){
-  //       return [1,1,1,1]
-  //     },
-  //     sum(xs: number[]){
-  //       return xs.reduce( (p,n) => p + n, 0)
-  //     }
-  //   })
-
-  //   assertEquals(answer, 'daniel: 4')
-  // }
+  {
+    assertEquals(transform('A1 * 10'), 'fn.addr("A1") * 10')
+  }
 })
